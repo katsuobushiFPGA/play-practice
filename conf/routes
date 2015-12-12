@@ -1,0 +1,24 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.View.index
+GET     /contact                    controllers.View.contact
+GET     /about                      controllers.View.about
+GET     /form                       controllers.View.userform
+POST    /submit                     controllers.View.submit
+GET     /rep                        controllers.View.responseTest
+GET     /read                       controllers.View.sessionRead
+GET     /clear                      controllers.View.sessionClear
+GET     /actionBuilderTest          controllers.View.actionBuilderTest
+GET     /authenticated              controllers.View.authenticated
+GET     /futureGet                  controllers.View.futureGet
+GET     /test/:name                 controllers.View.user(name)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+# To reverse routing
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+

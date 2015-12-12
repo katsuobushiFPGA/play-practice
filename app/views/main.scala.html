@@ -1,0 +1,28 @@
+@(title: String)(content:Html)
+@import views._
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="todo">
+        <meta name="author" content="todo">
+        <link rel="icon" href="@routes.Assets.at("images/favicon.ico")" />
+
+        <link rel = "stylesheet" href="@Css.BootStrapMin" />
+        <link rel = "stylesheet" href="@Css.BootStrapThemeMin" />
+        <link rel = "stylesheet" href="@routes.Assets.at("stylesheets/main.css")" />
+
+        <script src = "@Js.D3" ></script>
+        <script src = "@Js.JQuery" ></script>
+        <script src = "@Js.BootStrapJs" ></script>
+
+        <title>@title</title>
+    </head>
+    <body>
+    @content
+    </body>
+</html>
