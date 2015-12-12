@@ -2,3 +2,20 @@ language: scala
 scala: 
     - 2.11.7
 
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt/boot
+
+jdk:
+  - oraclejdk8
+
+before_script:
+  - travis_wait sbt downLib
+
+script:
+  - travis_wait sbt ++$TRAVIS_SCALA_VERSION test
+  - find $HOME/.sbt -name "*.lock" | xargs rm
+  - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
