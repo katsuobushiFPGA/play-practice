@@ -1,6 +1,8 @@
 language: scala
 scala: 
  - 2.11.7
+jdk:
+ - oraclejdk8
 env:
  - PLAY_VERSION=2.4.5
 before_script:
