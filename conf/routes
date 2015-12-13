@@ -14,6 +14,7 @@ GET     /clear                      controllers.View.sessionClear
 GET     /actionBuilderTest          controllers.View.actionBuilderTest
 GET     /authenticated              controllers.View.authenticated
 GET     /futureGet                  controllers.View.futureGet
+GET     /date                       controllers.View.date
 GET     /test/:name                 controllers.View.user(name)
 
 

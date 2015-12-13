@@ -48,6 +48,10 @@ class  View extends Controller {
     Ok(views.html.about("About Us"))
   }
 
+  def date = Action {
+    Ok(views.html.about(DATE))
+  }
+
   def user(name: String) = Action {
     Ok(views.html.about(name))
   }
