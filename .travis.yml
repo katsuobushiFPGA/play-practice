@@ -4,6 +4,6 @@ scala:
 jdk:
  - oraclejdk8
 env:
- - PLAY_VERSION=2.4.5
+ - PLAY_VERSION=2.4.4
 before_script:
  - wget http://central.maven.org/maven2/com/typesafe/play/play_2.11/${PLAY_VERSION}/play_2.11-${PLAY_VERSION}.jar
