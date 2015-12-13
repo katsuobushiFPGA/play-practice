@@ -5,4 +5,3 @@ env:
  - PLAY_VERSION=2.4.5
 before_script:
  - wget http://central.maven.org/maven2/com/typesafe/play/play_2.11/${PLAY_VERSION}/play_2.11-${PLAY_VERSION}.jar
-script: play-${PLAY_VERSION}/play test
