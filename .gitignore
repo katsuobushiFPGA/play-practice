@@ -3,6 +3,7 @@ target
 project/project
 project/target
 /.idea
+/.sbtserver
 /.idea_modules
 /.classpath
 /.project

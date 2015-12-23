@@ -1,7 +1,7 @@
 package controllers
 
 import play.api.Logger
-import play.api.data.validation.Constraints
+import play.api.data.validation.{ValidationError, Constraints}
 import play.api.mvc.Action
 import play.api.mvc.Security._
 import play.api.mvc._
@@ -63,7 +63,7 @@ class  View extends Controller {
     userForm.bindFromRequest.fold(
       formWithErrors => {
         // binding Failures
-        BadRequest(views.html.userform(userForm))
+        BadRequest(views.html.userform(formWithErrors))
       },
       userData => {
         Ok(views.html.index(userForm.toString))
